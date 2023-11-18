@@ -36,7 +36,7 @@ function LogoSelect(props) {
   return (
     <Select
       name="select-logo"
-      placeholder="Select a logo"
+      placeholder="Select team"
       value={props.selected}
       options={options}
       clearable={false}
