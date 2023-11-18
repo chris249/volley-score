@@ -13,7 +13,7 @@ const SuperCheckBox = styled(CheckBox)`
 function ControlPanel(props) {
   return (
     <div>
-      <section className="section is-medium container">
+      <section className="section container">
         <h1 className="title is-1">Volleyball Scoreboard</h1>
         <Notification>
           Please insert a match code of your choice. Remember it for later if you want to come back
@@ -61,7 +61,7 @@ function ControlPanel(props) {
             <button className="button is-large is-info margin-4" onClick={props.onFlipClick}>
               Flip teams
             </button>
-            <SuperCheckBox
+            {/* <SuperCheckBox
               checked={props.isShowing}
               label="Show scoreboard"
               onCheck={props.onShowCheck}
@@ -75,7 +75,7 @@ function ControlPanel(props) {
               checked={props.showColors}
               label="Shirt colors"
               onCheck={props.onColorCheck}
-            />
+            /> */}
           </section>
           <section className="section container is-dark">
             <h3 className="title is-3">Preview</h3>

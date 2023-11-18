@@ -14,9 +14,9 @@ import {
 
 class FirebaseStore {
   @observable matchId;
-  @observable showColors = false;
-  @observable showLogos = false;
-  @observable isShowing = false;
+  @observable showColors = true;
+  @observable showLogos = true;
+  @observable isShowing = true;
 
   @observable
   homeTeam = {
@@ -52,11 +52,11 @@ class FirebaseStore {
   };
 
   config = {
-    apiKey: 'AIzaSyAroBDj0Vw_4JdwKAWmB5Nq7ydjKq86mFM',
-    authDomain: 'beachvolleyball-scoreboard.firebaseapp.com',
-    databaseURL: 'https://beachvolleyball-scoreboard.firebaseio.com',
-    projectId: 'beachvolleyball-scoreboard',
-    storageBucket: 'beachvolleyball-scoreboard.appspot.com',
+    apiKey: 'AIzaSyA2MGg86ObcFkwMkTfCR4FGm8wHOOpy6sU',
+    authDomain: 'volleyball-score-137bd.firebaseapp.com',
+    databaseURL: 'https://volleyball-score-137bd.firebaseio.com',
+    projectId: 'volleyball-score-137bd',
+    storageBucket: 'volleyball-score-137bd.appspot.com',
   };
 
   @action

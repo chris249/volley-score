@@ -46,7 +46,7 @@ export const ColorSelect = styled.button`
   height: 48px;
   border-radius: 3px;
   background-color: ${props => props.background || '#DDDDDD'};
-  color: white;
+  color: #222;
   line-height: 48px;
   text-align: center;
   font-size: 18px;
@@ -54,8 +54,7 @@ export const ColorSelect = styled.button`
   border: none;
   text-transform: uppercase;
   overflow: hidden;
-  border: 1px solid #222b38;
-  text-shadow: 1px 1px 2px #222b38;
+  border: 1px solid #222;
 `;
 
 export const PickerContainer = styled.div`

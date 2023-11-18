@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import LogoSelect from './form/LogoSelect';
-import ColorPicker from './form/ColorPicker';
 
 function TeamControl(props) {
   return (
@@ -9,7 +8,7 @@ function TeamControl(props) {
       <label className="label" htmlFor={props.nameLabel}>
         {props.nameLabel}
       </label>
-      <p className="control">
+      {/* <p className="control">
         <input
           type="text"
           className="input is-large"
@@ -18,17 +17,17 @@ function TeamControl(props) {
           value={props.name}
           onChange={props.onNameChange}
         />
-      </p>
+      </p> */}
       {props.showLogos && (
         <div className="control">
           <LogoSelect onChange={props.onLogoChange} selected={props.logo} />
         </div>
       )}
-      {props.showColor && (
+      {/* {props.showColor && (
         <div className="control">
           <ColorPicker color={props.color} onColorSelect={props.onColorChange} />
         </div>
-      )}
+      )} */}
       <div className={classNames(props.isGreen ? 'grey-box' : 'light-box')}>
         <div
           className={classNames('counters', {

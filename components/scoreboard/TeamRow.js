@@ -56,8 +56,7 @@ const Row = styled.div`
 const LogoContainer = styled.div`
   min-height: 57px;
   height: 57px;
-  margin-right: 8px;
-  background-color: #999;
+  background-color: #7865ef;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,26 +66,24 @@ const LogoContainer = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 36px;
-  height: 36px;
+//   width: 36px;
+//   height: 36px;
+	transform: scale(1.3);
 `;
 
 const NameAndPointContainer = styled.div`
   height: 57px;
   font-family: 'Open Sans', 'Source Sans Pro', sans-serif;
-  font-size: 36px;
-  color: #222b38;
-  background-color: white;
+  color: white;
+  background-color: #7865ef;
   overflow: hidden;
   line-height: 55px;
   text-transform: uppercase;
-  font-weight: 600;
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 32px;
   font-weight: 400;
-  border-bottom: ${props => (props.showBorder ? '2px solid #222b38' : 'none')};
 `;
 
 const TeamColor = styled.div`
@@ -97,25 +94,21 @@ const TeamColor = styled.div`
 `;
 
 const TeamName = styled.div`
-  text-indent: 16px;
   width: 260px;
+  margin-left: 8px;
   margin-right: 16px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: ${props => props.size || '32'}px;
+  font-size: 20px;
+  line-height: 24px;
 `;
 
 const TeamSets = styled.div`
   width: 45px;
   height: 45px;
-  color: white;
-  background-color: #222b38;
+  color: #7865ef;
+  background-color: #e3edf7;
   line-height: 45px;
   text-align: center;
   font-size: 32px;
-  font-weight: 700;
-  margin-right: 16px;
   font-weight: 400;
 `;
 
@@ -124,7 +117,7 @@ const TeamPoints = styled.div`
   height: 48px;
   line-height: 48px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 400;
   margin-right: 8px;
   margin-left: 8px;
 `;
@@ -186,8 +179,8 @@ class TeamRow extends React.Component {
     logo: '',
     name: '',
     color: '',
-    showLogo: false,
-    showColor: false,
+    showLogo: true,
+    showColor: true,
     showPrevSets: false,
     textColor: '#ffffff',
   };
@@ -196,20 +189,9 @@ class TeamRow extends React.Component {
     super(props);
   }
 
-  getNameSize() {
-    const len = this.props.name.length;
-    if (len > 15) {
-      return 20;
-    }
-    if (len > 12) {
-      return 24;
-    }
-    return 32;
-  }
-
   render() {
     const { showLogo, logo, showBorder, name, sets, points, color, showColor } = this.props;
-  
+
     return (
       <Row>
         <LogoContainer isShowing={showLogo}>
@@ -217,7 +199,7 @@ class TeamRow extends React.Component {
         </LogoContainer>
         <NameAndPointContainer showBorder={showBorder}>
           {showColor && <TeamColor color={color} />}
-          <TeamName size={this.getNameSize()}>{name}</TeamName>
+          <TeamName>{name}</TeamName>
           <TeamSets>{sets}</TeamSets>
           {/* }<PrevSetsContainer isShowing={showPrevSets}>
             <PrevSet isShowing={showPrevSets}>21</PrevSet>

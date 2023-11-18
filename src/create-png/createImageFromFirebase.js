@@ -13,11 +13,11 @@ async function createImage({ tournamentId, matchId, homeColor = '', awayColor = 
     }
 
     const config = {
-      apiKey: 'AIzaSyAroBDj0Vw_4JdwKAWmB5Nq7ydjKq86mFM',
-      authDomain: 'beachvolleyball-scoreboard.firebaseapp.com',
-      databaseURL: 'https://beachvolleyball-scoreboard.firebaseio.com',
-      projectId: 'beachvolleyball-scoreboard',
-      storageBucket: 'beachvolleyball-scoreboard.appspot.com',
+        apiKey: 'AIzaSyA2MGg86ObcFkwMkTfCR4FGm8wHOOpy6sU',
+        authDomain: 'volleyball-score-137bd.firebaseapp.com',
+        databaseURL: 'https://volleyball-score-137bd.firebaseio.com',
+        projectId: 'volleyball-score-137bd',
+        storageBucket: 'volleyball-score-137bd.appspot.com',
     };
 
     if (!firebase.apps.length) {
@@ -71,7 +71,7 @@ async function createImage({ tournamentId, matchId, homeColor = '', awayColor = 
           if (!err) {
             writeStream.end();
             resolve({ ok: true });
-            return 
+            return
           }
           writeStream.end();
           reject({ ok: false, error: err })

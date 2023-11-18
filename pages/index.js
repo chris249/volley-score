@@ -19,8 +19,8 @@ class ScoreboardPanel extends React.Component {
       logoB: '',
       colorA: '#ffffff',
       colorB: '#ffffff',
-      showLogos: false,
-      showColors: false,
+      showLogos: true,
+      showColors: true,
       isShowing: true,
       saveFailed: false,
     };
@@ -86,6 +86,7 @@ class ScoreboardPanel extends React.Component {
     this.setState({
       nameA: selected.label,
       logoA: selected.value,
+      colorA: selected.home,
     });
   }
 
@@ -93,6 +94,7 @@ class ScoreboardPanel extends React.Component {
     this.setState({
       nameB: selected.label,
       logoB: selected.value,
+      colorB: selected.away,
     });
   }
 
@@ -196,9 +198,9 @@ class ScoreboardPanel extends React.Component {
           colorA={this.state.colorA}
           colorB={this.state.colorB}
           isFlipped={this.state.teamsFlipped}
-          showLogos={this.state.showLogos}
-          showColors={this.state.showColors}
-          isShowing={this.state.isShowing}
+          showLogos
+          showColors
+          isShowing
           saveFailed={this.state.saveFailed}
         />
       </div>

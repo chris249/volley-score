@@ -3,9 +3,9 @@ import axios from 'axios';
 
 class ScoreStore {
   @observable matchId;
-  @observable showColors = false;
-  @observable showLogos = false;
-  @observable isShowing = false;
+  @observable showColors = true;
+  @observable showLogos = true;
+  @observable isShowing = true;
 
   @observable
   homeTeam = {

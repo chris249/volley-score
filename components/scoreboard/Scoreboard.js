@@ -93,9 +93,9 @@ Scoreboard.defaultProps = {
     logo: '',
     color: '#22194D',
   },
-  showLogos: false,
-  showColors: false,
-  isShowing: false,
+  showLogos: true,
+  showColors: true,
+  isShowing: true,
 };
 
 export default inject((stores) => {
