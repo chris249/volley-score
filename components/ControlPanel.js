@@ -1,14 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import styled from 'styled-components';
 import TeamControl from './TeamControl';
-import CheckBox from './form/CheckBox';
 import Notification from './Notification';
 import { Scoreboard } from './scoreboard/Scoreboard';
-
-const SuperCheckBox = styled(CheckBox)`
-  margin: 4px;
-`;
 
 function ControlPanel(props) {
   return (
@@ -59,21 +53,6 @@ function ControlPanel(props) {
             <button className="button is-large is-info margin-4" onClick={props.onFlipClick}>
               Flip teams
             </button>
-            {/* <SuperCheckBox
-              checked={props.isShowing}
-              label="Show scoreboard"
-              onCheck={props.onShowCheck}
-            />
-            <SuperCheckBox
-              checked={props.showLogos}
-              label="Team logos"
-              onCheck={props.onLogoCheck}
-            />
-            <SuperCheckBox
-              checked={props.showColors}
-              label="Shirt colors"
-              onCheck={props.onColorCheck}
-            /> */}
           </section>
           <section className="section container is-dark">
             <h3 className="title is-3">Preview</h3>
@@ -162,10 +141,7 @@ ControlPanel.propTypes = {
   onColorBChange: PropTypes.func.isRequired,
   onIncrement: PropTypes.func.isRequired,
   onDecrement: PropTypes.func.isRequired,
-  onShowCheck: PropTypes.func.isRequired,
   onResetClick: PropTypes.func.isRequired,
-  onLogoCheck: PropTypes.func.isRequired,
-  onColorCheck: PropTypes.func.isRequired,
   onFlipClick: PropTypes.func.isRequired,
   matchId: PropTypes.string.isRequired,
   pointsA: PropTypes.number.isRequired,
